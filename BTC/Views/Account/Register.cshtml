@@ -1,0 +1,80 @@
+﻿@model RegisterModel;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <title>فرم ثبت نام مشتری</title>
+    <link rel="stylesheet" href="~/css/customeradd.css" asp-append-version="true" />
+    
+<link rel="stylesheet" href="~/css/Logincss.css" asp-append-version="true" >
+ <link rel="stylesheet" type="text/css" href="~/css/danveer.css" asp-append-version="true">
+</head>
+
+<body>
+  <h2>فرم ثبت نام</h2>
+  
+  <form asp-action="Register" asp-controller="Account"  method="post">
+      <div>
+      <label for="UserName" name="UserNmae"> نام کاربری :</label >
+      <input asp-for="UserName" type="text" id="UserName" name="UserName" required>
+    </div>
+
+    <div>
+      <label for="Password" name="Password">رمز ورود :</label >
+      <input asp-for="Password" type="password"  id="Password" name="Password" required>
+    </div>
+
+    <div>
+      <label for="PasswordTwo" name="PasswordTwo">تکرار رمز ورود :</label >
+      <input asp-for="PasswordTwo" type="password"  id="PasswordTwo" name="PasswordTwo" required>
+    </div>
+    <div>
+      <label for="Name" name="Nmae">نام و نام خانوادگی :</label >
+      <input asp-for="Name" type="text" id="Name" name="Name" required>
+    </div>
+      <div>
+      <label for="Email" name="Email">ایمیل :</label >
+      <input asp-for="Email" type="text" id="Email" name="Email" required>
+    </div>
+    <div>
+      <label for="PhoneNumber" name="PhoneNumber">شماره تلفن :</label>
+      <input asp-for="PhoneNumber" type="tel" id="PhoneNumber" name="PhoneNumber" required>
+    </div>
+    
+    <div>
+      <label for="CardId" name="CardId">کد ملی :</label>
+      <input asp-for="CardId" type="tel" id="CardId" name="CardId" required>
+    </div>
+    <div class="row">
+        @Html.ValidationSummary()
+     <div>
+      <input type="submit" value="ثبت نام">
+    </div>
+
+    <div>
+          <ul>
+              <li class="col">
+                  <a asp-area="" asp-controller="Account" asp-action="Login">ورود</a>
+              </li>
+              <li class="col">
+                  <h2>/</h2>
+              </li>
+              <li class="col">
+                  <a asp-area="" asp-controller="Account" asp-action="ForgotPass">فراموشی رمز</a>
+              </li>
+               <li class="col">
+                  <h2>/</h2>
+              </li>
+              <li class="col">
+                  <a asp-area="" asp-controller="Home" asp-action="Index">خانه</a>
+              </li>
+          </ul> 
+      </div>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+/*footer-part*/
+.footer-part {
+    color: #888888;
+    background-color: #191919;
+    padding: 100px 0 0 0;
+}
+
+    .footer-part .footer-logo {
+        margin-bottom: 15px;
+        float: right;
+    }
+
+    .footer-part .footer-p:last-child {
+        display: inline;
+    }
+
+    .footer-part .footer-p {
+        margin-bottom: 25px;
+        font-family: 'Open Sas',sans-serif;
+        float: right;
+    }
+
+    .footer-part ul.footer-detail {
+        list-style: none;
+    }
+
+    .footer-part .footer-detail li {
+        position: relative;
+        margin-bottom: 15px;
+    }
+
+        .footer-part .footer-detail li img {
+            position: absolute;
+            padding-top: 5px;
+        }
+
+    .footer-part .footer-links {
+        margin-bottom: 85px;
+    }
+
+    .footer-part .footer-detail .company-detail {
+        display: inline-flex;
+        padding-left: 33px;
+        font-family: 'Open Sans',sans-serif;
+        margin: 0px 40px
+    }
+
+    .footer-part .footer-detail li a {
+        text-decoration: none;
+        color: #888;
+    }
+
+    .footer-part .footer-links .heading-five {
+        font-size: 20px;
+        color: #fff;
+        font-family: 'Roboto Slab';
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+
+    .footer-part .footer-links .footer-menu {
+        list-style: none;
+    }
+
+        .footer-part .footer-links .footer-menu li {
+            margin-bottom: 5px;
+            font-family: 'Open Sans',sans-serif;
+        }
+
+            .footer-part .footer-links .footer-menu li a {
+                color: #888;
+                font-size: 14px;
+                font-weight: 500;
+            }
+/*End*/
+
+bottom-footer
+.bottom-footer {
+    padding: 40px 0 28px 0;
+    background-color: #212121;
+}
+
+.bottom-footer .copyright p {
+    color: #828282;
+    font-weight: 500;
+    padding-top: 10px;
+    font-size: 14px;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.bottom-footer .copyright a {
+    color: #10cb7f;
+    text-decoration: underline;
+}
+
+.footer-part .social-icon i {
+    background-color: #343736;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    margin-left: 7px;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 14px;
+}
+
+    .footer-part .social-icon i:hover {
+        background-color: #ff6d0d;
+    }

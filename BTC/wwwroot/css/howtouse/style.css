@@ -1,0 +1,38 @@
+.body {
+	height: 600px;
+	font-family: Arial, sans-serif;
+	background-image: url(~/image/howtouse/image/minbg.jpg);
+	background-size: cover;
+}
+
+.header2 {
+	background-color: #77d2bc;
+	color:black;
+	padding: 20px;
+	text-align: center;
+	font-size: 24px;
+    border-radius: 10px;
+	box-shadow: 0 2px 4px #4d4f4e;
+}
+
+.main {
+	margin: 20px;
+	padding: 20px;
+	background-color: #77d2bc;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px #4d4f4e;
+    direction: rtl;
+}
+
+.h2-1 {
+	font-size: 20px;
+	margin-top: 0;
+}
+
+.p {
+	line-height: 1.5em;
+}
+
+
+
+

@@ -1,0 +1,64 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @using BE;
+    @model Product
+}
+@*//اگ خواستی فوتر حذف کنی 
+@section AdditionalScripts
+{
+    <script>
+        // Your condition to hide or show the div
+        var hideDiv = true;
+
+        if (hideDiv) {
+            // Hide the div by modifying its CSS class
+            document.getElementById("myDiv").classList.add("hidden");
+        }
+    </script>
+}*@
+<head>
+    <link rel="stylesheet" href="~/css/createcss.css" asp-append-version="true" >
+    
+@* <link rel="stylesheet" type="text/css" href="~/css/danveer.css" asp-append-version="true">*@
+</head>
+
+<section id=section1>
+<h2>ساخت محصول</h2>
+
+    <div class="container1">
+     <div class="row1">
+   
+        <div class="col-md-6">
+            <form asp-controller="Product" asp-action="Create" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label class="lable" asp-for="Name">اسم کالا</label>
+                    <input asp-for="Name"  placeholder="اسم کالا..." class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="lable" asp-for="Description">توضیحات</label>
+                    <textarea asp-for="Description"type="text" placeholder="توضیحات..."  class="form-control" rows="4"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="lable" asp-for="Address">آدرس</label>
+                    <input asp-for="Address" placeholder="آدرس..." class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="lable" asp-for="PictureFileName">عکس محصول</label>
+                    <input asp-for="PictureFileName" type="file" class="form-control-file" />
+                    <span asp-validation-for="PictureFileName" class="text-danger"></span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+                </div>
+
+                <button type="submit" class="btn btn-primary">ساخت</button>
+            </form>
+        </div>
+    </div>
+</div>
+</section>

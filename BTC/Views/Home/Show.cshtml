@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Show"; 
+    Layout=null;
+}
+@model List<BE.Product>
+<head>
+    <link rel="stylesheet" href="~/css/showcss.css" asp-append-version="true" >
+    
+ <link rel="stylesheet" type="text/css" href="~/css/danveer.css" asp-append-version="true">
+</head>
+      @{
+          foreach(var i in Model)
+          {
+
+                <div class="row text-center">
+
+                        <div class="col-xs-12 col-sm-4  col-lg-4 img-box p-lg-0">
+                            <div class="hov">
+                                <a href="shop-detail.html" class="shop-img img-box">
+                                    <img src="~/image/Product/@i.PictureFileName" style="width:270px; height:350px; " >
+                                </a>
+                                <a href="shop-detail.html" class="product-button">
+                                    <img src="image/cart.png" alt="cart-icon">افزودن اگهی
+                                </a>
+                            </div>
+                           
+                        </div>
+                        <div class="detail">
+                        <div class="detail-prodouct">
+                
+                        <p class="product-title w-100">@i.Description</p> 
+                        </div>
+                        </div>
+                        
+                    </div>
+          }
+      }
+        

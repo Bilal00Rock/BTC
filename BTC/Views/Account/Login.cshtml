@@ -1,0 +1,62 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+@model RegisterModel
+
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>فرم ورود</title>   
+<link rel="stylesheet" href="~/css/Logincss.css" asp-append-version="true" >
+ <link rel="stylesheet" type="text/css" href="~/css/danveer.css" asp-append-version="true">
+</head>
+<body>
+    <h2>ورود به سایت</h2>
+    
+    <form asp-action="Login" asp-controller="Account"  method="post">
+      <div>
+        <label for="UserName">نام کاربری:</label>
+        <input asp-for="UserName" type="text" id="UserName" name="UserName" required>
+      </div>
+      
+      <div>
+        <label for="Password">رمز عبور:</label>
+        <input asp-for="Password" type="Password" id="Password" name="Password" required>
+      </div>
+      
+      <div class="row">
+        @Html.ValidationSummary()
+      <div>
+
+      <div>
+        <input type="submit" value="ورود" >
+      </div>
+      
+      <div>
+          <ul>
+              <li class="col">
+                  <a asp-area="" asp-controller="Account" asp-action="Register">ثبت نام</a>
+              </li>
+              <li class="col">
+                  <h2>/</h2>
+              </li>
+              <li class="col">
+                  <a asp-area="" asp-controller="Account" asp-action="ForgotPass">فراموشی رمز</a>
+              </li>
+               <li class="col">
+                  <h2>/</h2>
+              </li>
+              <li class="col">
+                  <a asp-area="" asp-controller="Home" asp-action="Index">خانه</a>
+              </li>
+          </ul> 
+      </div>
+     </form>
+
+</body>
+</html>
